@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Proposal Success{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<section class="report-status-section">
+  <div class="report-status-container">
+    <img src="{% static 'images/checkmark_1.jpeg' %}" alt="Checkmark" class="checkmark-icon">
+    <h2>You will get the report very shortly</h2>
+    <p>Our team will send the detailed report to your WhatsApp and email very shortly.</p>
+    <div class="action-buttons">
+      <button class="call-btn">Call now</button>
+      <button class="whatsapp-btn">Chat with us on WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

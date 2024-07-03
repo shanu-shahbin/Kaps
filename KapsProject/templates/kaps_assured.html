@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Kaps Assured {% endblock %}
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class="hero-section">
+    <img src="{% static 'images/index_1.jpg' %}" alt="KAPS Assured Image" class="hero-image">
+    <div class="hero-text">
+        <h1>Kaps Assured</h1>
+        <p>Unlock the value of your money.</p>
+    </div>
+</div>
+<div class="offer-container">
+    <h1>What we offer</h1>
+    <div class="offer-section">
+        <div class="offer-item left">
+            <img src="{% static 'images/index_3.jpg' %}" alt="Kaps Certified Inspection">
+            <div class="offer-description">
+                <h2>Kaps Certified Inspection</h2>
+                <p>Transparency is at the core of our operations. Our detailed inspection reports provide customers with a comprehensive overview of the vehicle's condition, including high-quality photographs from every angle. Highlighted features, engine and internal condition, transmission, body integrity, tyre health, and service history are meticulously documented to empower customers with knowledge and confidence.</p>
+            </div>
+        </div>
+        <div class="offer-item right">
+            <img src="{% static 'images/index_2.jpg' %}" alt="Kaps Warranty">
+            <div class="offer-description">
+                <h2>Kaps Warranty</h2>
+                <p>Drive with confidence knowing that every KAPS vehicle comes with a 1-year warranty on the engine and gearbox. Our warranty terms and conditions ensure that you are protected from unexpected repairs, providing peace of mind for the road ahead.</p>
+            </div>
+        </div>
+        <div class="offer-item left">
+            <img src="{% static 'images/demo_6.jpeg' %}" alt="Kaps Assistance">
+            <div class="offer-description">
+                <h2>Exchange Assurance</h2>
+                <p>We offer comprehensive roadside assistance to ensure you are never left stranded. Our 24/7 assistance service covers a wide range of scenarios, from flat tires to engine trouble, ensuring you have support whenever and wherever you need it.</p>
+            </div>
+        </div>
+        <div class="offer-item right">
+            <img src="{% static 'images/demo_10.jpg' %}" alt="Kaps Warranty">
+            <div class="offer-description">
+                <h2>Buyback Assurance</h2>
+                <p>We stand behind the quality of our vehicles. With our buyback assurance program, you can enjoy the flexibilty of returning your vehicle within a specified period for a guaranteed percentage of its value, ensuring a risk-free purchasing experience.</p>
+            </div>
+        </div>
+        <div class="offer-item left">
+            <img src="{% static 'images/demo_4.jpeg' %}" alt="Kaps Assistance">
+            <div class="offer-description">
+                <h2>Easy Loan Option</h2>
+                <p>We provide you an easy loan option for achieving your dream cars.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+{% endblock %}

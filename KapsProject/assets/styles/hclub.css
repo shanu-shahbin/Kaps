@@ -1,0 +1,58 @@
+
+
+.happiness-club-section {
+  background: white;
+  padding: 50px 20px;
+}
+
+.happiness-club-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.testimonial-card p {
+  margin: 5px 0;
+  color: #555;
+  text-align: center;
+}
+
+.testimonial-card .owner-info {
+  font-weight: bold;
+}
+
+.testimonial-card .testimonial {
+  font-style: italic;
+  margin-top: 10px;
+}

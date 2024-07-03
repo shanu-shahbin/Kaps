@@ -1,0 +1,99 @@
+.footer {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.footer-logo p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+.footer-logo span {
+  color: red;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media li {
+  margin: 5px 0;
+}
+
+.social-media li a {
+  display: flex;
+  align-items: center;
+}
+
+.social-media li a i {
+  margin-right: 10px;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.contact-button {
+  background-color: #2a7464;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contact-button i {
+  margin-right: 10px;
+}
+
+.contact-button:hover {
+  background-color: #245d54;
+}

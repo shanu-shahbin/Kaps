@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+<div class="happiness-club-section">
+  <h2>Happiness Club</h2>
+  <div class="testimonials-grid">
+    {% for happiness in h_club %}
+      <div class="testimonial-card">
+          <img src="{{ happiness.owner_image.url }}" alt="{{ happiness.owner_name }}">
+          <h3>{{ happiness.owner_name }}</h3>
+          <p class="owner-info">{{ happiness.owner_info }}</p>
+          <p class="testimonial">{{ happiness.testimonial }}</p>
+      </div>
+    {% endfor %} 
+</div>
+
+</div>
+{% include "footer.html" %}
+{% endblock %}

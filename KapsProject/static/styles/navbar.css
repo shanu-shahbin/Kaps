@@ -1,0 +1,111 @@
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  position: relative; /* Added to keep elements inside the navbar */
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar-brand a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: #ff0000; /* Adjust to match the design color */
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 3px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #dddddd;
+  }
+
+  .navbar-links a {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+.btn-outline-success {
+  padding: 10px 20px;
+  border: 2px solid #347974;
+  background-color: transparent;
+  color: #347974;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-outline-success:hover {
+  background-color: #347974;
+  color: #fff;
+}
+
+/* Ensure content below the navbar is pushed down when the navbar is expanded */
+@media (max-width: 768px) {
+  .navbar-links.active + .content {
+    margin-top: 100px; /* Adjust as needed to prevent overlap */
+  }
+}

@@ -1,0 +1,41 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Find Your Car{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<section class="find-car-section">
+  <div class="find-car-container">
+    <h2>Your Budget</h2>
+    <div class="options">
+      <button class="option-btn">Below 10 Lakh</button>
+      <button class="option-btn">10 Lakh-20 Lakh</button>
+      <button class="option-btn">20-50 Lakh</button>
+      <button class="option-btn">Above 50 Lakh</button>
+    </div>
+
+    <h2>Fuel preference</h2>
+    <div class="options">
+      <button class="option-btn">Petrol</button>
+      <button class="option-btn">Diesel</button>
+      <button class="option-btn">Electric</button>
+      <button class="option-btn">No preference</button>
+    </div>
+
+    <h2>Transmission</h2>
+    <div class="options">
+      <button class="option-btn">Manual</button>
+      <button class="option-btn">Automatic</button>
+      <button class="option-btn">No preference</button>
+    </div>
+
+    <button class="find-car-btn">Find Car</button>
+  </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}
+
+

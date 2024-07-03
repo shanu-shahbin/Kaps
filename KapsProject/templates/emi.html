@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} EMI {% endblock %}
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class="emi-calculator">
+  <h2>EMI Calculator</h2>
+  <div class="emi-result">
+      <h3 id="emi-amount">₹ 27,169 per month</h3>
+      <div class="details">
+          <p>Principal Loan Amount: <span id="principal-amount">₹ 1,203,300</span></p>
+          <p>Total Interest: <span id="total-interest">₹ 100,830</span></p>
+          <p>Total Amount Payable: <span id="total-amount">₹ 1,304,130</span></p>
+      </div>
+      <p class="disclaimer">
+          Disclaimer: Applicable rate of interest can vary subject to credit profile.
+          Loan approval is at the sole discretion of the finance partner.
+      </p>
+  </div>
+  <div class="emi-controls">
+    <div class="control">
+          <label for="loan-amount">Loan amount</label>
+          <input type="range" id="loan-amount" min="50000" max="5000000" value="1203300">
+          <input type="text" id="loan-amount-display" value="1,203,300" readonly>
+      </div>
+      <div class="control">
+          <label for="loan-duration">Duration of loan</label>
+          <input type="range" id="loan-duration" min="1" max="5" value="4">
+          <input type="text" id="loan-duration-display" value="4 years" readonly>
+      </div>
+      <div class="control">
+          <label for="interest-rate">Percentage of interest</label>
+          <input type="range" id="interest-rate" min="1" max="15" step="0.1" value="4">
+          <input type="text" id="interest-rate-display" value="4%" readonly>
+      </div>
+  </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loanAmountInput = document.getElementById('loan-amount');
+    const loanDurationInput = document.getElementById('loan-duration');
+    const interestRateInput = document.getElementById('interest-rate');
+
+    const loanAmountDisplay = document.getElementById('loan-amount-display');
+    const loanDurationDisplay = document.getElementById('loan-duration-display');
+    const interestRateDisplay = document.getElementById('interest-rate-display');
+
+    const emiAmount = document.getElementById('emi-amount');
+    const principalAmount = document.getElementById('principal-amount');
+    const totalInterest = document.getElementById('total-interest');
+    const totalAmount = document.getElementById('total-amount');
+
+    function calculateEMI() {
+        const P = parseInt(loanAmountInput.value);
+        const r = parseFloat(interestRateInput.value) / 12 / 100;
+        const n = parseInt(loanDurationInput.value) * 12;
+
+        const emi = P * r * (Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1));
+        const totalInterestAmount = emi * n - P;
+        const totalAmountPayable = P + totalInterestAmount;
+
+        emiAmount.innerText = `₹ ${emi.toFixed(0)} per month`;
+        principalAmount.innerText = `₹ ${P.toLocaleString()}`;
+        totalInterest.innerText = `₹ ${totalInterestAmount.toLocaleString()}`;
+        totalAmount.innerText = `₹ ${totalAmountPayable.toLocaleString()}`;
+    }
+
+    loanAmountInput.addEventListener('input', () => {
+        loanAmountDisplay.value = parseInt(loanAmountInput.value).toLocaleString();
+        calculateEMI();
+    });
+
+    loanDurationInput.addEventListener('input', () => {
+        loanDurationDisplay.value = `${loanDurationInput.value} years`;
+        calculateEMI();
+    });
+
+    interestRateInput.addEventListener('input', () => {
+        interestRateDisplay.value = `${interestRateInput.value}%`;
+        calculateEMI();
+    });
+
+    calculateEMI(); // Initial calculation
+});
+
+</script>
+{% endblock %}

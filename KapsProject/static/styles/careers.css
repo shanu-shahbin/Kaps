@@ -1,0 +1,78 @@
+.careers-section {
+  background: white;
+  padding: 50px 20px;
+}
+
+.careers-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.job-listing {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.job-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure it takes full height */
+}
+
+.job-card h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.job-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.job-card .experience {
+  color: #555;
+}
+
+.job-card .footer-careers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Pushes the footer to the bottom */
+  width: 100%;
+}
+
+.job-card .location, .job-card .posted-date {
+  color: #888;
+  font-size: 14px;
+}
+
+.job-card .location {
+  text-align: left;
+}
+
+.job-card .posted-date {
+  text-align: right;
+}
+
+.job-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes the full height of its parent container */
+  text-align: center; /* Center-align text */
+  background: white; /* Add a background if needed */
+  padding: 20px; /* Add some padding if needed */
+}
+
+.apply-through, .no-postings {
+  font-size: 20px;
+  color: #000000; /* Adjust color as needed */
+}

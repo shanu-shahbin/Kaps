@@ -1,0 +1,71 @@
+
+.hero-section-about {
+  background: linear-gradient(to right, #104545, #347974 );
+  color: #fff;
+  text-align: center;
+  padding: 200px 20px; /* Increased padding */
+}
+
+.hero-text-about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-text-about h1 {
+  font-size: 48px; /* Adjust font size as needed */
+  margin-bottom: 20px;
+}
+
+.hero-text-about p {
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+.about-section {
+  background: white;
+  color: black;
+  padding: 50px 20px;
+}
+
+.about-section h2 {
+  text-align: left;
+  font-size: 26px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+}
+
+.about-section h3 {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+}
+
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-left: 15%;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 18px;
+  color: #555;
+}

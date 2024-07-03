@@ -1,0 +1,244 @@
+/* Car Details Section */
+.car-details-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.car-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+}
+
+.car-info {
+  padding: 20px;
+}
+
+.car-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.car-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2em;
+  color: #000;
+}
+
+.price span {
+  font-weight: bold;
+}
+
+.inspection {
+  font-size: 1em;
+  color: #2e7d6b;
+}
+
+.inspection span {
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.test-drive-btn, .book-now-btn {
+  padding: 15px 30px;
+  background-color: #2e7d6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.test-drive-btn:hover, .book-now-btn:hover {
+  background-color: #265e54;
+}
+
+/* Car Overview Section */
+.container-over {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-overview {
+  margin-bottom: 30px;
+}
+
+.car-overview h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overview-item .label {
+  font-weight: bold;
+  color: #555;
+}
+
+.overview-item .value {
+  margin-top: 5px;
+  font-size: 1.1em;
+}
+
+/* Inspection Report Section */
+.inspection-report {
+  margin-bottom: 30px;
+}
+
+.inspection-report h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.report-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.report-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.get-report {
+  background-color: #347974;
+  color: white;
+}
+
+.view-full-report {
+  background-color: #347974;
+  color: white;
+}
+
+.star {
+  color: gold;
+}
+
+/* Benefits Section */
+.benefits {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.benefits h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #2e7d6b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.benefit-item:hover {
+  background-color: #f1f1f1;
+}
+
+.benefit-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.benefit-item span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.benefit-item .arrow {
+  font-size: 1.2em;
+  color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .car-details-container, .container-over {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .test-drive-btn, .book-now-btn {
+      flex: none;
+      width: 100%;
+  }
+
+  .benefits-list {
+      grid-template-columns: 1fr;
+  }
+}
+ 

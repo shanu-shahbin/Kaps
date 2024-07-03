@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Car Details{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<section class="car-details-section">
+  <div class="car-details-container">
+      <div class="car-image">
+          <img src="{% static 'images/car_2.jpg' %}" alt="Range Rover Evoque">
+      </div>
+      <div class="car-info">
+          <h2>Range Rover Evoque</h2>
+          <p>4.2K km . Petrol . Automatic</p>
+          <p class="price">Price: <span>₹ 64.50 Lakh</span> Finance Available</p>
+          <p class="inspection">Kaps Certified inspection rating: <span>9/10</span></p>
+          <div class="buttons">
+              <button class="test-drive-btn">Test Drive</button>
+              <button class="book-now-btn">Book Now</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="container-over">
+  <section class="car-overview">
+      <h1>Car Overview</h1>
+      <div class="overview-grid">
+          <div class="overview-item">
+              <span class="label">Model</span>
+              <span class="value">Jan 2024</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">Reg. Year</span>
+              <span class="value">Jan 2024</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">Fuel</span>
+              <span class="value">Petrol</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">KM Driven</span>
+              <span class="value">4.2 KM</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">Transmission</span>
+              <span class="value">Automatic</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">Insurance Validity</span>
+              <span class="value">Nov 2031</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">Insurance Type</span>
+              <span class="value">Third party</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">No. of owner(s)</span>
+              <span class="value">1st owner</span>
+          </div>
+          <div class="overview-item">
+              <span class="label">RTO</span>
+              <span class="value">KL 01</span>
+          </div>
+      </div>
+  </section>
+
+  <section class="inspection-report">
+      <h2>Inspection Report</h2>
+      <table class="report-table">
+          <tr>
+              <td>Engine</td>
+              <td><span class="star">★</span> 9/10</td>
+              <td>Suspension</td>
+              <td><span class="star">★</span> 9/10</td>
+          </tr>
+          <tr>
+              <td>Brakes</td>
+              <td><span class="star">★</span> 9/10</td>
+              <td>Transmission</td>
+              <td><span class="star">★</span> 9/10</td>
+          </tr>
+          <tr>
+              <td>Interior</td>
+              <td><span class="star">★</span> 9/10</td>
+              <td>Wheels & Tyres</td>
+              <td><span class="star">★</span> 9/10</td>
+          </tr>
+      </table>
+      <div class="report-buttons">
+          <a href="#" class="button get-report">Get Report</a>
+          <a href="#" class="button view-full-report">View Full Report</a>
+      </div>
+  </section>
+
+  <section class="benefits">
+      <h1>Benefits <span class="badge">KAPS assured</span></h1>
+      <div class="benefits-list">
+          <div class="benefit-item">
+              <img src="{% static 'images/icon1.png' %}" alt="KAPS Certified Inspection">
+              <span>KAPS Certified Inspection</span>
+              <span class="arrow"></span>
+          </div>
+          <div class="benefit-item">
+              <img src="{% static 'images/icon2.png' %}" alt="KAPS Warranty">
+              <span>KAPS Warranty</span>
+              <span class="arrow"></span>
+          </div>
+          <div class="benefit-item">
+              <img src="{% static 'images/icon3.png' %}" alt="Buyback Assurance">
+              <span>Buyback Assurance</span>
+              <span class="arrow"></span>
+          </div>
+          <div class="benefit-item">
+              <img src="{% static 'images/icon4.png' %}" alt="Exchange Assurance">
+              <span>Exchange Assurance</span>
+              <span class="arrow"></span>
+          </div>
+          <div class="benefit-item">
+              <img src="{% static 'images/car_2.jpg' %}" alt="Easy Loan Option">
+              <span>Easy Loan Option</span>
+              <span class="arrow"></span>
+          </div>
+      </div>
+  </section>
+  <div class="showcase-section">
+    <h2 style="padding-bottom: 1rem;">Similiar Cars</h2>
+
+    <div class="image-carousel" id="imageCarousel">
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_1.jpg' %}" alt="Kia Seltos">
+            <h3>Kia Seltos</h3>
+            <p>&#8377; 800,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_1.jpg' %}" alt="Jeep Compass">
+            <h3>Jeep Compass</h3>
+            <p>&#8377; 1,900,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <!-- Add more car items as needed -->
+    </div>
+</div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const carousel = document.getElementById('imageCarousel');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carousel.classList.add('active');
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
+
+carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+</script>
+{% endblock %}

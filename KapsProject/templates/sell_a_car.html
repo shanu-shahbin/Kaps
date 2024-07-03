@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Sell Your Car{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<div class="form-container spacing">
+    <h1>Sell your car</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-grid">
+            <div class="form-group">
+                {{ form.registration_number.label_tag }}
+                {{ form.registration_number }}
+            </div>
+            <div class="form-group">
+                {{ form.brand.label_tag }}
+                {{ form.brand }}
+            </div>
+            <div class="form-group">
+                {{ form.model.label_tag }}
+                {{ form.model }}
+            </div>
+            <div class="form-group">
+                {{ form.registered_year.label_tag }}
+                {{ form.registered_year }}
+            </div>
+            <div class="form-group">
+                {{ form.fuel_type.label_tag }}
+                {{ form.fuel_type }}
+            </div>
+            <div class="form-group">
+                {{ form.km_driven.label_tag }}
+                {{ form.km_driven }}
+            </div>
+            <div class="form-group">
+                {{ form.expected_price.label_tag }}
+                {{ form.expected_price }}
+            </div>
+        </div>
+        <button type="submit" class="submit-button" style="background-color:#347974; color: white;">Send Proposal</button>
+
+    </form>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

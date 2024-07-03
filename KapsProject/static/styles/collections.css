@@ -1,0 +1,218 @@
+/* Car Listings Section */
+.car-listings-section {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 20px; /* Add padding between navbar and section */
+  padding-bottom: 20px; /* Add padding between section and footer */
+  margin: 0 auto; /* Center the section */
+  gap: 20px; /* Add gap between filters and car listings */
+}
+
+/* Filters */
+.filters {
+  width: 300px; /* Increase width for better visibility */
+  border: 1px solid #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Add background color for better visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle box shadow */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.filters h3 {
+  margin-top: 0;
+  font-size: 1.4em; /* Increase font size for better visibility */
+  color: #333;
+  text-align: center; /* Center the heading */
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em; /* Increase font size for better visibility */
+  color: #555;
+  font-weight: bold; /* Make labels bold for better visibility */
+}
+
+.btn {
+  background-color: #2e7d6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Increase padding for better visibility */
+  cursor: pointer;
+  font-size: 1.1em; /* Increase font size for better visibility */
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #265e54;
+}
+
+/* Car Listings */
+.car-listings {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.car-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 48%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+}
+
+.car-image {
+  position: relative;
+}
+
+.car-image img {
+  width: 100%;
+  height: 180px; /* Reduce height */
+  object-fit: cover;
+}
+
+.share-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(0 0 0 / 0%);
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none; /* Ensure text decoration is none */
+}
+
+.car-info {
+  padding: 15px; /* Reduce padding */
+  text-align: left;
+  flex-grow: 1; /* Make car-info take remaining space */
+}
+
+.car-info h2 {
+  margin-top: 0;
+  font-size: 1.4em; /* Reduce font size */
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.car-info .price {
+  font-size: 1.1em; /* Reduce font size */
+  color: #000;
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.car-info .price span {
+  font-weight: bold;
+}
+
+.car-info .inspection {
+  font-size: 1em;
+  color: #2e7d6b;
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.car-info .inspection span {
+  font-weight: bold;
+}
+
+.car-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.download-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2e7d6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  margin-top: 10px; /* Add margin to separate from other content */
+}
+
+.download-btn:hover {
+  background-color: #265e54;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .car-listings-section {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .filters {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+  }
+
+  .car-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters h3 {
+    font-size: 1.2em;
+  }
+
+  .filter-group label {
+    font-size: 1em;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .car-info h2 {
+    font-size: 1.2em;
+  }
+
+  .car-info .price {
+    font-size: 1em;
+  }
+
+  .car-image img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-info h2 {
+    font-size: 1em;
+  }
+
+  .car-info .price {
+    font-size: 0.9em;
+  }
+
+  .car-info .inspection {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+  }
+
+  .car-image img {
+    height: 120px;
+  }
+}

@@ -1,0 +1,88 @@
+/* Report Status Section */
+.report-status-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-status-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.checkmark-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.report-status-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.report-status-container p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.call-btn {
+  background-color: #347974;
+  color: white;
+  border: none;
+}
+
+.whatsapp-btn {
+  background-color: white;
+  color: #347974;
+  border: 2px solid #347974;
+}
+
+.call-btn:hover {
+  background-color: #5f9ea0;
+}
+
+.whatsapp-btn:hover {
+  background-color: #347974;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .report-status-section {
+    padding: 30px 10px;
+  }
+
+  .checkmark-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .report-status-container h2 {
+    font-size: 1.2em;
+  }
+
+  .report-status-container p {
+    font-size: 0.9em;
+  }
+
+  .action-buttons button {
+    font-size: 0.8em;
+  }
+}

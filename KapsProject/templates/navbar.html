@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar">
+    <div class="navbar-brand">
+      <a href="{% url 'home' %}">KAPS</a>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="navbar-links" id="navbar-links">
+      <a href="{% url 'collections' %}">Collections</a>
+      <a href="{% url 'kaps_assured' %}">KAPS Assured</a>
+      <a href="{% url 'about_us' %}">About Us</a>
+      <a href="{% url 'sell_a_car' %}">Sell a Car</a>
+      <a href="{% url 'happiness_club' %}">Happiness Club</a>
+      <a href="{% url 'career_list' %}">Careers</a>
+      <a href="{% url 'contact' %}"><button class="btn btn-outline-success">Contact</button></a>
+    </div>
+  </nav>

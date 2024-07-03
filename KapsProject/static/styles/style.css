@@ -1,0 +1,320 @@
+
+
+/* Viewport settings */
+@media only screen and (max-width: 768px) {
+  /* Adjustments for tablets and smaller screens */
+  .carousel-slide {
+    width: 80%; /* Example: Adjust width for smaller screens */
+  }
+
+  .button,
+  .find-car-btn,
+  .chat-btn,
+  .contact-btn {
+    padding: 8px 12px; /* Example: Adjust button padding */
+    font-size: 0.8em; /* Example: Adjust font size */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjustments for mobile phones */
+  .carousel-slide {
+    width: 100%; /* Example: Full width for mobile screens */
+  }
+
+  .button,
+  .find-car-btn,
+  .chat-btn,
+  .contact-btn {
+    padding: 6px 10px; /* Example: Further adjust button padding */
+    font-size: 0.7em; /* Example: Further reduce font size */
+  }
+}
+
+/* Landing Page Styles */
+
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("{% static 'images/landing-background.jpg' %}") no-repeat center center/cover;
+}
+
+.landing-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align to bottom */
+}
+
+.landing-content {
+  color: white;
+  text-align: center;
+  margin-bottom: 80px; /* Adjust the margin to position above the bottom */
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-content .highlight {
+  color: red;
+}
+
+.landing-buttons {
+  margin-top: 20px;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 15px 23px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button.explore {
+  background-color: white;
+  color: black;
+}
+
+.button.explore:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.button.sell {
+  background-color: black;
+  color: white;
+}
+
+.button.sell:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.carousel-indicators {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 5px;
+  width: 35px;
+  background-color: #bbb;
+  border-radius: 0%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.kaps-assured {
+  padding: 20px;
+  text-align: center;
+}
+
+.kaps-assured h1 {
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.grid-item {
+  position: relative;
+  text-align: center;
+}
+
+.grid-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+  font-size: smaller;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item.large {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-content p {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    margin: 5px;
+  }
+}
+
+
+/* Showcase Section */
+.showcase-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.image-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px; /* Add padding to the bottom */
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: 400px; /* Adjust width for your design */
+  margin: 0 10px; /* Adjust margins for spacing */
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover; /* Ensure images fill the container */
+}
+
+/* Thin scroller */
+.image-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.image-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.image-carousel::-webkit-scrollbar-thumb {
+  background: #EEEDEB;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.image-carousel:hover::-webkit-scrollbar-thumb {
+  background: #347974;
+}
+
+
+/* Find the perfect car for you section */
+
+/* Want to get your dream car from us? section */
+.dream-car-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.dream-car-section h2 {
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+.dream-car-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dream-car-buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact-btn {
+  background-color: #347974;
+  color: white;
+  border: none;
+}
+
+.chat-btn {
+  background-color: white;
+  color: #347974;
+  border: 1px solid #086761;
+}
+
+.contact-btn:hover {
+  background-color: #fff;
+  color: #347974;
+}
+
+.chat-btn:hover {
+  background-color: #347974;
+  color: white;
+}
+

@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Kaps {% endblock %}
+{% block content %}
+
+{% include "navbar.html" %}
+
+<div class="landing-container" id="landing-container">
+    <div class="landing-background">
+        <div class="landing-content">
+            <h1>Where <span id="dynamic-text" class="highlight">trust</span> meets the road</h1>
+            <div class="landing-buttons">
+                <a href="{% url 'collections' %}" class="button explore">Explore collections</a>
+                <a href="{% url 'sell_a_car' %}" class="button sell">Sell your car</a>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot" onclick="changeBackground(0)"></span>
+                <span class="dot" onclick="changeBackground(1)"></span>
+                <span class="dot" onclick="changeBackground(2)"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="kaps-assured">
+    <h1>KAPS Assured</h1>
+    <div class="grid-container">
+        <div class="grid-item large">
+            <img src="{% static 'images/index_4.jpg' %}" alt="Kaps certified inspection">
+            <div class="overlay">Kaps Certified Inspection</div>
+        </div>
+        <div class="grid-item">
+            <img src="{% static 'images/demo_4.jpeg' %}" alt="Kaps warranty">
+            <div class="overlay">Kaps Warranty</div>
+        </div>
+        <div class="grid-item">
+            <img src="{% static 'images/demo_6.jpeg' %}" alt="Exchange assurance">
+            <div class="overlay">Exchange Assurance</div>
+        </div>
+        <div class="grid-item">
+            <img src="{% static 'images/demo_10.jpg' %}" alt="Easy loan option">
+            <div class="overlay">Buyback Assurance</div>
+        </div>
+        
+        <div class="grid-item">
+            <img src="{% static 'images/demo_10.jpg' %}" alt="Easy loan option">
+            <div class="overlay">Easy Loan Option</div>
+        </div>
+        <div class="grid-item">
+            <img src="{% static 'images/demo_10.jpg' %}" alt="Easy loan option">
+            <div class="overlay">Kaps AssiStance</div>
+        </div>
+    </div>
+</section>
+  
+<div class="showcase-section">
+    <h2 style="padding-bottom: 1rem;">Featured Cars</h2>
+
+    <div class="image-carousel" id="imageCarousel">
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_1.jpg' %}" alt="Kia Seltos">
+            <h3>Kia Seltos</h3>
+            <p>&#8377; 800,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_1.jpg' %}" alt="Jeep Compass">
+            <h3>Jeep Compass</h3>
+            <p>&#8377; 1,900,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <div class="carousel-slide">
+            <img src="{% static 'images/car_2.jpg' %}" alt="Jeep Wrangler">
+            <h3>Jeep Wrangler</h3>
+            <p>&#8377; 6,200,000</p>
+        </div>
+        <!-- Add more car items as needed -->
+    </div>
+</div>
+<div style="background-color: #fff; padding: 35px; border-radius: 5px;">
+    <h2 style="color: #333; font-size: 30px; font-weight: bold; margin-bottom: 10px;">Looking for EMI&nbsp;?</h2>
+    <p style="color: #666; font-size: 16px; margin-bottom: 15px; font-weight: bold;">Calculate your EMI very easily with KAPS</p>
+
+    <a href="{% url 'emi' %}" style="text-decoration: none;">
+  <button class="btn btn-outline-secondary" style="background-color: #347974; color: #fff; padding: 15px 30px; border: 1px solid #219C90; border-radius: 4px; cursor: pointer; font-size: 1.2rem;" onmouseover="this.style.backgroundColor='#219C90'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#219C90';">Calculate EMI</button>
+</a>
+
+
+</a>
+
+</div>
+
+<section class="find-car-section">
+    <div class="find-car-container">
+      <h2>Find the perfect car for you</h2>
+      <p>Answer few questions to find a car that is perfect for you</p>
+      <button class="find-car-btn">Find car</button>
+    </div>
+  </section>
+
+  <!-- Want to get your dream car from us? section -->
+  <section class="dream-car-section">
+    <h2>Want to get your dream car from us?</h2>
+    <div class="dream-car-buttons">
+      <button class="contact-btn">Contact Us</button>
+      <button class="chat-btn">Chat with us on Whatsapp</button>
+    </div>
+  </section>
+{% include "footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const words = ['trust', 'confidence', 'safety'];
+    let wordIndex = 0;
+    const backgroundImages = [
+        "{% static 'images/index_1.jpg' %}",
+        "{% static 'images/index_2.jpg' %}",
+        "{% static 'images/index_3.jpg' %}"
+    ];
+
+    function changeWord() {
+        const dynamicText = document.getElementById('dynamic-text');
+        dynamicText.textContent = words[wordIndex];
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    function changeBackground(index) {
+        const landingContainer = document.getElementById('landing-container');
+        landingContainer.style.backgroundImage = `url(${backgroundImages[index]})`;
+        updateDots(index);
+    }
+
+    function updateDots(activeIndex) {
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === activeIndex) {
+                dot.classList.add('active');
+            }
+        });
+    }
+
+    setInterval(changeWord, 6000); // Change word every 2 seconds
+
+    // Initialize with the first background image and active dot
+    changeBackground(0);
+    updateDots(0);
+
+    window.changeBackground = changeBackground;
+});
+
+const carousel = document.getElementById('imageCarousel');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carousel.classList.add('active');
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
+
+carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+</script>
+{% endblock %}

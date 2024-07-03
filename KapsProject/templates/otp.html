@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .otp-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .otp-form {
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .otp-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .otp-form p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .otp-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .otp-inputs input {
+            width: 45px;
+            padding: 10px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .otp-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #006d5b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .otp-form button:hover {
+            background-color: #004d40;
+        }
+
+        .otp-form a {
+            display: block;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .otp-form a:hover {
+            text-decoration: underline;
+        }
+
+        .otp-form .resend {
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="otp-container">
+        <form class="otp-form">
+            <h2>OTP</h2>
+            <p>A four digit OTP has been sent to your mobile number. Enter the OTP below</p>
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+                <input type="text" maxlength="1" required>
+            </div>
+            <button type="submit">Login</button>
+            <a href="#" class="resend">Didn't receive the OTP? Resend</a>
+        </form>
+    </div>
+</body>
+</html>

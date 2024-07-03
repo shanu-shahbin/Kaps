@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Collections{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<section class="car-listings-section">
+    <div class="filters">
+        <form method="GET">
+            <h3>Budget</h3>
+            <div class="filter-group">
+                <label><input type="checkbox"> Upto 10 Lakh</label>
+                <label><input type="checkbox"> 10 Lakh - 20 Lakh</label>
+                <label><input type="checkbox"> 20 - 50 Lakh</label>
+                <label><input type="checkbox"> Above 50 Lakh</label>
+            </div>
+            <h3>Brand</h3>
+            <div class="filter-group">
+                <label><input type="checkbox"> Kia</label>
+                <label><input type="checkbox"> Nissan</label>
+                <label><input type="checkbox"> Toyota</label>
+                <label><input type="checkbox"> Land Rover</label>
+                <label><input type="checkbox"> Audi</label>
+                <label><input type="checkbox"> BMW</label>
+                <label><input type="checkbox"> Mercedes</label>
+            </div>
+            <h3>Year</h3>
+            <div class="filter-group">
+                <label><input type="checkbox"> 2024</label>
+                <label><input type="checkbox"> 2023</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </form>
+    </div>
+    <div class="car-listings">
+        <div class="car-card">
+            <div class="car-image">
+                <img src="{% static 'images/hclub_profile.jpg' %}" alt="Range Rover Evoque">
+                <a href="#" class="share-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                    <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                  </svg></a>
+            </div>
+            <div class="car-info">
+                <h2>Range Rover Evoque</h2>
+                <p class="price">Price: <span>₹ 64.50 Lakh</span></p>
+                <p class="inspection">Kaps Certified inspection rating: <span>9/10</span></p>
+                <p>EMI Available</p>
+                <p>Model: 2024</p>
+                <p>Fuel type: Petrol</p>
+                <a href="#" class="download-btn">Download Info</a>
+            </div>
+        </div>
+        <!-- Add more car-card divs as needed -->
+    </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}
